@@ -16,7 +16,7 @@ area_rectangle(-1, -1) # returns DomainError
 """
 function area_rectangle(length, width)
     if length < 0 || width < 0
-        throw(DomainError(side, "area_rectangle() only works with positive values"))
+        throw(DomainError("area_rectangle() only works with positive values"))
     end
 
     return length * width
@@ -36,7 +36,7 @@ area_square(-1) # returns DomainError
 """
 function area_square(side)
     if side < 0
-        throw(DomainError(side, "area_square() only works with positive values"))
+        throw(DomainError("area_square() only works with positive values"))
     end
 
     return side ^ 2
@@ -56,7 +56,7 @@ area_cube(-1) # returns DomainError
 """
 function area_cube(side)
     if side < 0
-        throw(DomainError(side, "area_circle() only works with positive values"))
+        throw(DomainError("area_circle() only works with positive values"))
     end
 
     return 6(side ^ 2)
@@ -92,11 +92,19 @@ Finds area of a heron triangle (a triangle is a triangle where each of the lengt
 # Example
 
 ```julia
-area_heron_triangle(2, 12, 13) # returns 30
-area_heron_triangle(-1, 0, 0) # return DomainError
-area_heron_triangle(0, -1, 0) # return DomainError
+area_heron_triangle(2, 12, 13) == 10.790620927453618
+
 area_heron_triangle(0, 0, -1) # returns DomainError
+area_heron_triangle(0, -1, 0) # returns DomainError
+area_heron_triangle(0, -1, -1) # returns DomainError
+area_heron_triangle(-1, 0, 0) # returns DomainError
+area_heron_triangle(-1, 0, -1) # returns DomainError
+area_heron_triangle(-1, -1, 0) # returns DomainError
 area_heron_triangle(-1, -1, -1) # returns DomainError
+
+area_heron_triangle(1, 2, 4) # returns DomainError
+area_heron_triangle(1, 6, 4) # returns DomainError
+area_heron_triangle(4, 2, 1) # returns DomainError
 ```
 """
 function area_heron_triangle(side1, side2, side3)
@@ -128,7 +136,7 @@ function area_circle(radius)
         throw(DomainError("area_circle() only works with positive values"))
     end
 
-    return π * radius ^ 2
+    return pi * radius ^ 2
 end
 
 """
@@ -140,7 +148,7 @@ Finds area of a sphere
 
 ```julia
 area_sphere(8) # returns 804.247719318987
-area_circle(-1) # returns DomainError
+area_sphere(-1) # returns DomainError
 ```
 """
 function area_sphere(radius)
@@ -148,7 +156,7 @@ function area_sphere(radius)
         throw(DomainError("area_sphere() only works width positive values"))
     end
 
-    return 4π * (radius ^ 2)
+    return 4pi * (radius ^ 2)
 end
 
 """
@@ -181,11 +189,14 @@ Finds area of a trapezium
 # Example
 
 ```julia
-area_trapezium(10, 20, 30) # returns 450
-area_trapezium(-1, 0, 0) # return DomainError
-area_trapezium(0, -1, 0) # return DomainError
+area_trapezium(10, 20, 30) # returns 450.0
 area_trapezium(0, 0, -1) # returns DomainError
-area_trapezium(-1, -1, -1) # returns DomainError
+area_trapezium(0, -1, 0) # returns DomainError
+area_trapezium(0, -1, -1) # returns DomainError
+area_trapezium(-1, 0, 0) # returns DomainError
+area_trapezium(-1, 0, -1) # returns DomainError
+area_trapezium(-1, -1, 0) # returns DomainError
+DomainError area_trapezium(-1, -1, -1) # returns DomainError
 ```
 """
 function area_trapezium(Base, base, height)
@@ -204,10 +215,10 @@ Finds area of a hexagon
 # Example
 
 ```julia
-area_hexagon(5, 4) # returns 10
-area_heron_triangle(-1, 0) # return DomainError
-area_heron_triangle(0, -1) # returns DomainError
-area_heron_triangle(-1, -1) # returns DomainError
+area_hexagon(5, 4) # returns 10.0
+area_hexagon(-1, 0) # return DomainError
+area_hexagon(0, -1) # returns DomainError
+area_hexagon(-1, -1) # returns DomainError
 ```
 """
 function area_hexagon(perimeter, apothegm)
@@ -221,7 +232,7 @@ end
 """
     area_octagon(side)
 
-Finds area of a octagon
+Finds area of an octagon
 
 # Example
 
