@@ -23,8 +23,14 @@ export volume_sphere
 export volume_prism
 export volume_cuboid
 
+export euler_totient
+export euler_forward_method
+# export euler_backward_method
+
 # Includes : maths
 # include("maths/approximate_pi.jl")
 include("maths/area.jl")
 include("maths/volume.jl")
+include("maths/euler_totient.jl")
+include("maths/euler_method.jl")
 end
