@@ -113,4 +113,8 @@ using Algorithms, Test
         @test euler_forward_method((x, t) -> x, 1, (0, 5))[1][end] == 143.33937864611195
         # @test euler_backward_method()
     end
+
+    @testset "Maths: Fibonacci" begin
+        @test fibonacci(10) == 55
+    end
 end
