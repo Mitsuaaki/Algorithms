@@ -66,6 +66,51 @@ using Algorithms, Test
     end
 
     @testset "Maths: Volume" begin
-        #
+        @test volume_cube(3) == 27
+        @test_throws DomainError volume_cube(-1)
+
+        @test volume_parallelepiped(4, 3, 6) == 72
+        @test_throws DomainError volume_parallelepiped(-1, 0, 0)
+        @test_throws DomainError volume_parallelepiped(0, -1, 0)
+        @test_throws DomainError volume_parallelepiped(0, 0, -1)
+        @test_throws DomainError volume_parallelepiped(-1, -1, -1)
+
+        @test volume_cylinder(7, 5) == 769.6902001294993
+        @test_throws DomainError volume_cylinder(-1, 0)
+        @test_throws DomainError volume_cylinder(0, -1)
+        @test_throws DomainError volume_cylinder(-1, -1)
+
+        @test volume_pyramid(3, 5) == 5
+        @test_throws DomainError volume_pyramid(-1, 0)
+        @test_throws DomainError volume_pyramid(0, -1)
+        @test_throws DomainError volume_pyramid(-1, -1)
+
+        @test volume_cone(5, 8) == 209.43951023931956
+        @test_throws DomainError volume_cone(-1, 0)
+        @test_throws DomainError volume_cone(0, -1)
+        @test_throws DomainError volume_cone(-1, -1)
+
+        @test volume_sphere(3) == 113.09733552923254
+        @test_throws DomainError volume_sphere(-1)
+
+        @test volume_prism(8, 5) == 40
+        @test_throws DomainError volume_prism(-1, 0)
+        @test_throws DomainError volume_prism(0, -1)
+        @test_throws DomainError volume_prism(-1, -1)
+
+        @test volume_cuboid(5, 7, 10) == 350
+        @test_throws DomainError volume_cuboid(-1, 0, 0)
+        @test_throws DomainError volume-cuboid(0, -1, -1)
+        @test_throws DomainError volume_cuboid(-1, -1, 0)
+        @test_throws DomainError volume_cuboid(-1, -1, -1)
+    end
+
+    @teset "Maths: Euler's Totient" begin
+        @test euler_totient(5) == 4.0
+    end
+
+    @testset "Maths: Euler's Implicit method" begin
+        @test euler_forward_method((x, t) -> x, 1, (0, 5))[1][end] == 143.33937864611195
+        # @test euler_backward_method()
     end
 end
