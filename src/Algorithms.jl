@@ -29,6 +29,10 @@ export euler_forward_method
 
 export fibonacci
 
+# Exports : search
+export linear_search
+
+
 # Includes : maths
 # include("maths/approximate_pi.jl")
 include("maths/area.jl")
@@ -36,4 +40,8 @@ include("maths/volume.jl")
 include("maths/euler_totient.jl")
 include("maths/euler_method.jl")
 include("maths/fibonacci.jl")
+
+# Includes : search
+include("search/linear_search.jl")
+
 end
