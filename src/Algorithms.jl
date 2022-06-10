@@ -1,6 +1,6 @@
 module Algorithms
 # Exports : maths
-export approximate_pi
+# export approximate_pi
 
 export area_rectangle
 export area_square
@@ -24,7 +24,7 @@ export volume_prism
 export volume_cuboid
 
 # Includes : maths
-include("maths/approximate_pi.jl")
+# include("maths/approximate_pi.jl")
 include("maths/area.jl")
 include("maths/volume.jl")
 end
