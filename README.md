@@ -10,6 +10,14 @@ This package allows you to use various algorithms in mathematics, machine learni
 
 📚 Thanks to [Documenter.jl](https://github.com/JuliaDocs/Documenter.jl) to allow the constant generation and updating of documentation.
 
+## If there are any problem in putting the documentation online
+```julia-repl
+(@v1.7) pkg> activate path/to/Algorithms
+
+julia> include("path/to/Algoritms/docs/make.jl")
+```
+After that you just have to search on your web browser `path/to/Algorithms/docs/build/index.html`
+
 ## Some explications
 For the moment this repository is still in development, you can of course contribute by creating pulls_request however I intend to develop all the algorithms I thought of so if a pull_request is made while the code was planned it will be refused
 
