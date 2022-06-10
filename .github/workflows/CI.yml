@@ -5,11 +5,6 @@ on:
       - main
     tags: '*'
   pull_request:
-concurrency:
-  # Skip intermediate builds: always.
-  # Cancel intermediate builds: only if it is a pull request build.
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}
 jobs:
   test:
     name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.arch }} - ${{ github.event_name }}
@@ -24,16 +19,14 @@ jobs:
           - ubuntu-latest
           - macOS-latest
           - windows-latest
-          arch:
-            - x64
-            - x86
-          threads:
-            - "4"
-          exclude:
-            - os: macOS-latest
-              arch: x86
-            - os: macOS-latest
-              version: 'nightly'
+        arch:
+          - x64
+          - x86
+        exclude:
+          - os: macOS-latest
+            arch: x86
+          - os: macOS-latest
+            version: 'nightly'
     steps:
       - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@v1
