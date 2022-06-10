@@ -18,11 +18,22 @@ jobs:
       fail-fast: false
       matrix:
         version:
+          - '1.7'
           - 'nightly'
         os:
           - ubuntu-latest
-        arch:
-          - x64
+          - macOS-latest
+          - windows-latest
+          arch:
+            - x64
+            - x86
+          threads:
+            - "4"
+          exclude:
+            - os: macOS-latest
+              arch: x86
+            - os: macOS-latest
+              version: 'nightly'
     steps:
       - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@v1
@@ -54,6 +65,7 @@ jobs:
       - uses: julia-actions/julia-docdeploy@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
       - run: |
           julia --project=docs -e '
             using Documenter: DocMeta, doctest
@@ -61,4 +73,4 @@ jobs:
             DocMeta.setdocmeta!(Algorithms, :DocTestSetup, :(using Algorithms); recursive=true)
             doctest(Algorithms)'
       - run: |
-          julia --color=yes --project=docs/ docs/make.jl ${{ matrix.format }}
+          julia --color=yes --project=docs/ docs/make.jl
