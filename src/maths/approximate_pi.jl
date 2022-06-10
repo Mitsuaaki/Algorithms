@@ -18,5 +18,5 @@ function approximate_pi(order = 37)
         throw(DomainError("approximate_pi() only works with positive values"))
     end
  
-    return 4 * (4 * evaluate(atan(Taylor1(BigFloat, order) ), 1 / big(5)) - evaluate(atan(Taylor1(BigFloat, order) ), 1 / big(239)))
+    return 4 * (4 * evaluate(atan(Taylor1(BigFloat, order)), 1 / big(5)) - evaluate(atan(Taylor1(BigFloat, order)), 1 / big(239)))
 end
