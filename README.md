@@ -10,6 +10,13 @@ This package allows you to use various algorithms in mathematics, machine learni
 
 📚 Thanks to [Documenter.jl](https://github.com/JuliaDocs/Documenter.jl) to allow the constant generation and updating of documentation.
 
+## How to install this package in my project ?
+```julia-repl
+(@v1.7) pkg> activate MyProject
+
+julia> add https://github.com/Mitsuaaki/Algorithms
+```
+
 ## If there are any problem in putting the documentation online
 ```julia-repl
 (@v1.7) pkg> activate path/to/Algorithms
