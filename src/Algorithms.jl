@@ -1,6 +1,4 @@
 module Algorithms
-using TaylorSeries
-
 # Exports : maths
 export approximate_pi
 

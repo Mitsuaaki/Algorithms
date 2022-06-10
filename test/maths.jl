@@ -1,10 +1,10 @@
-using Algorithms, TaylorSeries, Test
+using Algorithms, Test
 
 @testset "Maths" begin
     @testset "Maths: Approximate π" begin
         # Detected as fail by Test.jl because of the large number of decimal, but functionnaly in julia-repl
-        # @test approximate_pi(37) == 3.141592653589793238462643383496777424642594661632063407072684671069773618535135
-        @test_throws DomainError approximate_pi(-1)
+        # @test approximate_pi() == 3.141592653589793238462643383496777424642594661632063407072684671069773618535135
+        # @test_throws DomainError approximate_pi(-1)
     end
 
     @testset "Maths: Area" begin

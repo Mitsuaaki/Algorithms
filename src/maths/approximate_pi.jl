@@ -9,8 +9,8 @@ Finds an approximation of π using a 37th Taylor expansion with John Machin's ap
 
 # Example
 ```julia
-approximate_pi(37) # returns 3.141592653589793238462643383496777424642594661632063407072684671069773618535135
-approximate_pi(-37) # returns DomainError
+approximate_pi() # returns 3.141592653589793238462643383496777424642594661632063407072684671069773618535135
+approximate_pi(-1) # returns DomainError
 ```
 """
 function approximate_pi(order = 37)
