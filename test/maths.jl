@@ -100,12 +100,12 @@ using Algorithms, Test
 
         @test volume_cuboid(5, 7, 10) == 350
         @test_throws DomainError volume_cuboid(-1, 0, 0)
-        @test_throws DomainError volume-cuboid(0, -1, -1)
+        @test_throws DomainError volume_cuboid(0, -1, -1)
         @test_throws DomainError volume_cuboid(-1, -1, 0)
         @test_throws DomainError volume_cuboid(-1, -1, -1)
     end
 
-    @teset "Maths: Euler's Totient" begin
+    @testset "Maths: Euler's Totient" begin
         @test euler_totient(5) == 4.0
     end
 
