@@ -31,6 +31,7 @@ export fibonacci
 
 # Exports : search
 export linear_search
+export binary_search
 
 
 # Includes : maths
@@ -43,5 +44,6 @@ include("maths/fibonacci.jl")
 
 # Includes : search
 include("search/linear_search.jl")
+include("search/binary_search.jl")
 
 end
