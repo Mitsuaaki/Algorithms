@@ -46,4 +46,7 @@ include("maths/fibonacci.jl")
 include("search/linear_search.jl")
 include("search/binary_search.jl")
 
+# Includes : string
+include("string/palindrome.jl")
+
 end
