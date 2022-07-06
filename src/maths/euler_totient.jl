@@ -4,6 +4,7 @@
     euler_totient(n)
 
 Find the Euler's totient phi, Euler Totient Function is also known as phi function.
+Eulers Totient function finds the number of relative primes of a number n from 1 to n
 
 # Example
 
