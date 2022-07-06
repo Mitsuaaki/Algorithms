@@ -1,4 +1,4 @@
-# Function for calculing te solution of a differential equation using euler's method
+# Function for calculing the solution of a differential equation using euler's method
 
 """
     euler_forward_method()
