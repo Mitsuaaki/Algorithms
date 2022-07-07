@@ -38,7 +38,8 @@ export palindrome
 
 # Exports : cipher
 export caesar
-
+export ars_crypt
+export ars_decrypt
 
 # Includes : maths
 # include("maths/approximate_pi.jl")
@@ -57,4 +58,5 @@ include("string/palindrome.jl")
 
 # Includes : cipher
 include("cipher/caesar.jl")
+include("cipher/ars.jl")
 end
