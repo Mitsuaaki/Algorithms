@@ -6,6 +6,7 @@
 [![](https://img.shields.io/badge/docs-dev-blue.svg)](https://mitsuaaki.github.io/Algorithms/dev)
 
 This package allows you to use various algorithms in mathematics, machine learning, computer science and physics with Julia. <br>
+
 If you want to support the development of this package, please star the repositories, road to 100 !
 
 📚 Thanks to [Documenter.jl](https://github.com/JuliaDocs/Documenter.jl) to allow the constant generation and updating of documentation.
