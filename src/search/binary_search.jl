@@ -11,11 +11,11 @@ sample = [0, 23, 52, 552, 555, 602, 1004]
 reversed_sample = reverse(sample)
 unsorted_sample = [124, 53, 21, 163]
 
-@test binary_search(sample, 52) # returns 3:3
-@test binary_search(sample, 602) # returns 6:6
-@test binary_search(reversed_sample, 52; rev = true) # returns 5:5
-@test binary_search(reversed_sample, 602; rev = true) # returns 2:2
-@test_throws ErrorException binary_search(unsorted_sample, 21)
+binary_search(sample, 52) # returns 3:3
+binary_search(sample, 602) # returns 6:6
+binary_search(reversed_sample, 52; rev = true) # returns 5:5
+binary_search(reversed_sample, 602; rev = true) # returns 2:2
+binary_search(unsorted_sample, 21) # throws ErrorException
 ```
 """
 function binary_search(arr, key; rev = false, lt = <, by = identity)
