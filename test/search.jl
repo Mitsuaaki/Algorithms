@@ -1,4 +1,5 @@
-using Algorithms, Test
+using Algorithms
+using Test
 
 @testset "Search" begin
     @testset "Search: Linear" begin
