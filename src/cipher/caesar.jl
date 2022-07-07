@@ -9,7 +9,7 @@ caesar(3, "Hello World!") # returns "Khoor Zruog!"
 caesar(3, "Khoor Zruog!") # returns "Hello World!"
 ```
 """
-function caesar(rot, s)
+function caesar(rot::Int, str::String)
     rotate = function (r)
         if 'a' <= r <= 'z'
             v = ((r - 'a') + rot) % 26
@@ -24,13 +24,13 @@ function caesar(rot, s)
         return r
     end
 
-    if s isa Char
+    if str isa Char
         return rotate(s)
     end
 
     result = ""
 
-    for r in s
+    for r in str
         result *= rotate(r)
     end
 
