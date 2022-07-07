@@ -33,6 +33,12 @@ export fibonacci
 export linear_search
 export binary_search
 
+# Exports : string
+export palindrome
+
+# Exports : cipher
+export caesar
+
 
 # Includes : maths
 # include("maths/approximate_pi.jl")
@@ -49,4 +55,6 @@ include("search/binary_search.jl")
 # Includes : string
 include("string/palindrome.jl")
 
+# Includes : cipher
+include("cipher/caesar.jl")
 end

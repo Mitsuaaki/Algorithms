@@ -1,9 +1,9 @@
-struct standard_security
+@enum standard_security begin
     sec1 = 1
-    sec2 = 2
-    sec3 = 3
-    sec4 = 4
-    sec5 = 5
-    sec6 = 6
-    sec7 = 7
+    sec2
+    sec3
+    sec4
+    sec5
+    sec6
+    sec7
 end
