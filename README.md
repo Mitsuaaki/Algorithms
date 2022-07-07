@@ -2,13 +2,11 @@
 <h1 align="center">Algorithms</h1>
 
 [![Discord](https://img.shields.io/discord/808045925556682782.svg?logo=discord&colorB=7289DA&style=flat-square)](https://discord.gg/NqRhMaDpBr)&nbsp;
+[![](https://img.shields.io/badge/docs-stable-blue.svg)](https://mitsuaaki.github.io/Algorithms/stable)
+[![](https://img.shields.io/badge/docs-dev-blue.svg)](https://mitsuaaki.github.io/Algorithms/dev)
 
 This package allows you to use various algorithms in mathematics, machine learning, computer science and physics with Julia. <br>
 If you want to support the development of this package, please star the repositories, road to 100 !
-
-
-[![](https://img.shields.io/badge/docs-stable-blue.svg)](https://mitsuaaki.github.io/Algorithms/stable)
-[![](https://img.shields.io/badge/docs-dev-blue.svg)](https://mitsuaaki.github.io/Algorithms/dev)
 
 📚 Thanks to [Documenter.jl](https://github.com/JuliaDocs/Documenter.jl) to allow the constant generation and updating of documentation.
 
