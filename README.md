@@ -1,4 +1,6 @@
-# Algorithms
+<h3 align="center"><img src="https://raw.githubusercontent.com/Mitsuaaki/Algorithms/main/docs/src/assets/favicon.ico" width="128" height="128"/></h3>
+<h1 align="center">Algorithms</h1>
+
 [![Discord](https://img.shields.io/discord/808045925556682782.svg?logo=discord&colorB=7289DA&style=flat-square)](https://discord.gg/NqRhMaDpBr)&nbsp;
 
 This package allows you to use various algorithms in mathematics, machine learning, computer science and physics with Julia. <br>
