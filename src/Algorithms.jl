@@ -58,5 +58,5 @@ include("string/palindrome.jl")
 
 # Includes : cipher
 include("cipher/caesar.jl")
-include("cipher/ars.jl")
+include("cipher/ars/ars.jl")
 end
