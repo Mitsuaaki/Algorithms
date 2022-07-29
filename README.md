@@ -33,7 +33,7 @@ This repository is to train me to give free access to all those who want to use 
 
 ## ToDo
 
-* Fix & complete the documentation
+* Complete the documentation
 * Add more algorithms
 * Find some motivations for the development of this package
 * Make a C++/Rust & GoLang version... maybe ASM too for the joke
